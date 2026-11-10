@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Homeoffice-Tracker — Eintragen</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="app-header">
+      <h1>Homeoffice-Tracker</h1>
+      <nav><a href="overview.html">Zur Übersicht →</a></nav>
+    </header>
+    <p class="subtitle">Trage ein, ob du an den Tagen dieser Woche im Homeoffice oder In Office bist.</p>
+
+    <div class="member-picker">
+      <label for="member-select">Wer bist du?</label>
+      <select id="member-select">
+        <option value="">— bitte wählen —</option>
+        <option value="__add_new__">+ Neuen Namen hinzufügen</option>
+      </select>
+    </div>
+
+    <div id="add-member-form" class="member-picker" hidden>
+      <label for="new-member-name">Dein Name</label>
+      <input type="text" id="new-member-name" placeholder="z.B. Anna Muster" maxlength="80" />
+      <button id="add-member-btn" class="split-toggle">Hinzufügen</button>
+      <button id="cancel-member-btn" class="split-toggle">Abbrechen</button>
+      <div id="add-member-error" class="save-indicator error"></div>
+    </div>
+
+    <div id="week-info" class="hint"></div>
+    <div id="day-list" class="day-list"></div>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/entry.js"></script>
+</body>
+</html>
